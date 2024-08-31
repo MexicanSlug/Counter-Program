@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <button id="add">Add</button>
+    <span id="number">0</span>
+    <button id="sub">Subtract</button>
+    <script>
+
+        let count = 0;
+
+        let addElement = document.getElementById("add")
+        let subElement = document.getElementById("sub")
+        let numberElement = document.getElementById("number")
+
+        function addButton() {
+            count++;
+            numberElement.innerText = count;
+        }
+
+        function subButton() {
+            count--;
+            numberElement.innerText = count;
+        }
+
+        addElement.addEventListener("click", addButton)
+        subElement.addEventListener("click", subButton)
+
+    </script>
+</body>
+</html>
